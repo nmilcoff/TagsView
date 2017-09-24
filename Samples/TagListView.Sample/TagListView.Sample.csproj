@@ -113,15 +113,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\TagListView\TagListView.csproj">
-      <Project>{5C09D90F-2752-4E00-A568-0F83215FC169}</Project>
-      <Name>TagListView</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\ic_add.png" />
     <BundleResource Include="Resources\ic_add%402x.png" />
     <BundleResource Include="Resources\ic_add%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\TagListView\TagListView.csproj">
+      <Project>{5C09D90F-2752-4E00-A568-0F83215FC169}</Project>
+      <Name>TagListView</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
