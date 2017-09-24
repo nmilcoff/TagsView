@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\NuGet.Build.Packaging.0.1.276\build\NuGet.Build.Packaging.props" Condition="Exists('..\..\packages\NuGet.Build.Packaging.0.1.276\build\NuGet.Build.Packaging.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -9,6 +10,17 @@
     <RootNamespace>TagListView</RootNamespace>
     <AssemblyName>TagListView</AssemblyName>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <PackOnBuild>true</PackOnBuild>
+    <PackageId>TagsView</PackageId>
+    <PackageVersion>1.0</PackageVersion>
+    <Authors>nmilcoff</Authors>
+    <PackageLicenseUrl>https://github.com/nmilcoff/TagsView/blob/master/LICENSE</PackageLicenseUrl>
+    <Owners>Nicolas Milcoff</Owners>
+    <PackageProjectUrl>https://github.com/nmilcoff/TagsView</PackageProjectUrl>
+    <Summary>Simple and highly customizable Xamarin.iOS tag list view</Summary>
+    <PackageTags>tags xamarin view ios view control widget</PackageTags>
+    <Title>Tags View</Title>
+    <Description>Simple and highly customizable Xamarin.iOS tag list view.</Description>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -65,4 +77,5 @@
     <ImageAsset Include="Assets.xcassets\ic_removetag.imageset\ic_cancel_small.pdf" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\..\packages\NuGet.Build.Packaging.0.1.276\build\NuGet.Build.Packaging.targets" Condition="Exists('..\..\packages\NuGet.Build.Packaging.0.1.276\build\NuGet.Build.Packaging.targets')" />
 </Project>

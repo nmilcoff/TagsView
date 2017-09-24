@@ -76,13 +76,13 @@
     <Compile Include="MvxSimpleTagListView.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TagListView\TagListView.csproj">
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TagsView\TagsView.csproj">
       <Project>{5C09D90F-2752-4E00-A568-0F83215FC169}</Project>
       <Name>TagsView</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
