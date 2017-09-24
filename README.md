@@ -22,6 +22,7 @@ The widget also exposes two event handlers:
 - Tag selected
 - Tag button tapped
 
+<img src="Assets/sshot.png" alt="Screenshot" />
 
 ## Download
 
