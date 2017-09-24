@@ -5,7 +5,7 @@
 //
 using Foundation;
 
-namespace TagListView.Sample
+namespace TagsView.Sample
 {
     [Register("ViewController")]
     partial class ViewController

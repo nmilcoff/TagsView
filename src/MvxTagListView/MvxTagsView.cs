@@ -7,18 +7,18 @@ using MvvmCross.Binding.iOS.Views;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform.Platform;
 using MvvmCross.Platform.WeakSubscription;
-using TagListView;
+using TagsView;
 
-namespace MvxTagListView
+namespace MvxTagsView
 {
-    public class MvxTagListView<TSourceItem> : TagsView, IMvxBindable
+    public class MvxTagsView<TSourceItem> : TagsView.TagListView, IMvxBindable
     {
         private Func<TSourceItem, string> sourceItemToStringFunc;
 
         private IEnumerable<TSourceItem> _itemsSource;
         private IDisposable _subscription;
 
-        public MvxTagListView(Func<TSourceItem, string> sourceItemToStringFunc, bool enableRemoveButton = true)
+        public MvxTagsView(Func<TSourceItem, string> sourceItemToStringFunc, bool enableRemoveButton = true)
             : base(enableRemoveButton)
         {
             this.CreateBindingContext();

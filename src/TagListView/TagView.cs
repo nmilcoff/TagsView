@@ -2,7 +2,7 @@
 using Cirrious.FluentLayouts.Touch;
 using UIKit;
 
-namespace TagListView
+namespace TagsView
 {
     public class TagView : UIView
     {

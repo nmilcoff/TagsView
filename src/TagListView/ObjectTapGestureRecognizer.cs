@@ -1,7 +1,7 @@
 ﻿using System;
 using UIKit;
 
-namespace TagListView
+namespace TagsView
 {
     public class ObjectTapGestureRecognizer : UITapGestureRecognizer
     {

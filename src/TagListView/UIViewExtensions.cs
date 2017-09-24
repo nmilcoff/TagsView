@@ -1,7 +1,7 @@
 ﻿using Cirrious.FluentLayouts.Touch;
 using UIKit;
 
-namespace TagListView
+namespace TagsView
 {
     internal static class UIViewExtensions
     {

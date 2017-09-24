@@ -1,6 +1,6 @@
 ﻿using UIKit;
 
-namespace TagListView.Sample
+namespace TagsView.Sample
 {
     public class Application
     {

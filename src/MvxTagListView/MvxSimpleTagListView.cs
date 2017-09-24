@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace MvxTagListView
+namespace MvxTagsView
 {
-    public class MvxSimpleTagListView : MvxTagListView<string>
+    public class MvxSimpleTagsView : MvxTagsView<string>
     {
-        public MvxSimpleTagListView(bool enableRemoveButton = true)
+        public MvxSimpleTagsView(bool enableRemoveButton = true)
             : base(s => s, enableRemoveButton)
         {
         }

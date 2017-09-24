@@ -2,21 +2,22 @@
 
 using UIKit;
 using Cirrious.FluentLayouts.Touch;
+using TagsView;
 
-namespace TagListView.Sample
+namespace TagsView.Sample
 {
     public partial class ViewController : UIViewController
     {
         private UITextField input;
         private UIButton btnAdd;
-        private TagsView tagsView;
+        private TagListView tagsView;
 
         private UIButton btnAlignLeft, btnAlignCenter, btnAlignRight;
         private UIButton btnChangeBackgroundColor, btnChangeTextColor, btnChangeButtonSize, btnChangeRemoveButtonIcon, btnChangeRemoveButtonIconColor;
         private UIButton btnMarginX, btnMarginY, btnPaddingX, btnPaddingY;
         private UIStackView stackAlignment, stackBulkStyles, stackBulkStyles2;
 
-        private TagsView borderedTagsView;
+        private TagListView borderedTagsView;
 
         protected ViewController(IntPtr handle) : base(handle)
         {
@@ -31,7 +32,7 @@ namespace TagListView.Sample
             this.btnAdd.SetTitle("Add", UIControlState.Normal);
             this.btnAdd.SetTitleColor(UIColor.Blue, UIControlState.Normal);
             this.btnAdd.TouchUpInside += this.BtnAdd_TouchUpInside;
-            this.tagsView = new TagsView(true)
+            this.tagsView = new TagListView(true)
             {
                 PaddingY = 4f,
                 TextFont = UIFont.SystemFontOfSize(20f)
@@ -126,7 +127,7 @@ namespace TagListView.Sample
             this.stackBulkStyles2.AddArrangedSubview(this.btnPaddingY);
 
 
-            this.borderedTagsView = new TagsView(false)
+            this.borderedTagsView = new TagListView(false)
             {
                 BorderColor = UIColor.Orange,
                 TagBackgroundColor = UIColor.Red,

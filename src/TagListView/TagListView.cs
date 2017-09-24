@@ -4,15 +4,15 @@ using System.Linq;
 using Cirrious.FluentLayouts.Touch;
 using UIKit;
 
-namespace TagListView
+namespace TagsView
 {
-    public class TagsView : UIView
+    public class TagListView : UIView
     {
         private bool enableTagButton;
 
         private nfloat currentWidth;
 
-        public TagsView(bool enableRemoveButton = true)
+        public TagListView(bool enableRemoveButton = true)
         {
             this.enableTagButton = enableRemoveButton;
 

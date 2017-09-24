@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TagListView
+namespace TagsView
 {
     public enum TagsAlignment
     {

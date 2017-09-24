@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{E1E194A8-3345-4923-BF7A-427ADEA9E8E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TagListView.Sample", "Samples\TagListView.Sample\TagListView.Sample.csproj", "{FAEE3C4E-D331-4333-A4DC-FDD477A741B4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TagsView.Sample", "Samples\TagListView.Sample\TagsView.Sample.csproj", "{FAEE3C4E-D331-4333-A4DC-FDD477A741B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TagListView", "src\TagListView\TagListView.csproj", "{5C09D90F-2752-4E00-A568-0F83215FC169}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TagsView", "src\TagListView\TagsView.csproj", "{5C09D90F-2752-4E00-A568-0F83215FC169}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxTagListView", "src\MvxTagListView\MvxTagListView.csproj", "{CC792F6A-D2F9-4B69-8D36-53B95AB53AA2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxTagsView", "src\MvxTagListView\MvxTagsView.csproj", "{CC792F6A-D2F9-4B69-8D36-53B95AB53AA2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
