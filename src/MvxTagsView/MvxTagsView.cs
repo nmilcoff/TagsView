@@ -26,7 +26,7 @@ namespace MvxTagsView
             this.sourceItemToStringFunc = sourceItemToStringFunc;
 
             this.TagSelected += this.Handle_TagSelected;
-            this.RemoveButtonTapped += this.Handle_RemoveButtonTapped;
+            this.TagButtonTapped += this.Handle_RemoveButtonTapped;
 
             if (this.BindingContext is MvxTaskBasedBindingContext context)
             {
@@ -53,7 +53,7 @@ namespace MvxTagsView
                 _subscription = null;
 
                 this.TagSelected -= this.Handle_TagSelected;
-                this.RemoveButtonTapped -= this.Handle_RemoveButtonTapped;
+                this.TagButtonTapped -= this.Handle_RemoveButtonTapped;
             }
             base.Dispose(disposing);
         }

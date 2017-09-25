@@ -12,9 +12,9 @@ namespace TagsView
 
         private nfloat currentWidth;
 
-        public TagListView(bool enableRemoveButton = true)
+        public TagListView(bool enableTagButton = true)
         {
-            this.enableTagButton = enableRemoveButton;
+            this.enableTagButton = enableTagButton;
 
             this.TagViews = new List<TagView>();
             this.RowViews = new List<UIStackView>();
@@ -25,7 +25,7 @@ namespace TagsView
         public List<UIStackView> RowViews { get; set; }
 
         public event EventHandler<object> TagSelected;
-        public event EventHandler<object> RemoveButtonTapped;
+        public event EventHandler<object> TagButtonTapped;
 
         #region bulk styles
         private UIColor tagTextColor = UIColor.White;
@@ -441,7 +441,7 @@ namespace TagsView
                 var tagButtonView = (TagButtonView)tagView;
                 tagButtonView.ButtonSize = this.TagButtonSize;
                 tagButtonView.Button.TintColor = this.TagButtonColor;
-                tagButtonView.Button.TouchUpInside += this.RemoveButtonOnTouchUpInside;
+                tagButtonView.Button.TouchUpInside += this.TagButtonOnTouchUpInside;
 
                 if (this.ButtonIcon != null)
                     tagButtonView.Button.SetImage(this.ButtonIcon.ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate), UIControlState.Normal);
@@ -463,12 +463,12 @@ namespace TagsView
             }
         }
 
-        private void RemoveButtonOnTouchUpInside(object sender, EventArgs e)
+        private void TagButtonOnTouchUpInside(object sender, EventArgs e)
         {
             var btn = (UIButton)sender;
-            if (btn.Superview is TagView tagRemove)
+            if (btn.Superview is TagView tagButton)
             {
-                this.RemoveButtonTapped?.Invoke(this, tagRemove.TagSource);
+                this.TagButtonTapped?.Invoke(this, tagButton.TagSource);
             }
         }
         #endregion

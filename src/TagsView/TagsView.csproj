@@ -12,7 +12,7 @@
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <PackOnBuild>true</PackOnBuild>
     <PackageId>TagsView</PackageId>
-    <PackageVersion>1.0.1</PackageVersion>
+    <PackageVersion>1.0.2</PackageVersion>
     <Authors>nmilcoff</Authors>
     <PackageLicenseUrl>https://github.com/nmilcoff/TagsView/blob/master/LICENSE</PackageLicenseUrl>
     <Owners>Nicolas Milcoff</Owners>

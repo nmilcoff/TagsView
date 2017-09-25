@@ -37,7 +37,7 @@ namespace TagsView.Sample
                 PaddingY = 4f,
                 TextFont = UIFont.SystemFontOfSize(20f)
             };
-            this.tagsView.RemoveButtonTapped += (sender, e) =>
+            this.tagsView.TagButtonTapped += (sender, e) =>
             {
                 this.tagsView.RemoveTag(e);
             };
