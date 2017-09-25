@@ -17,21 +17,21 @@ Customizable features:
 - Tag icon
 - Tag icon size
 - Tag icon color
+- Tag selected event
+- Tag button tapped event
 
-The widget also exposes two event handlers:
-- Tag selected
-- Tag button tapped
+<h3 align="center">
+    <img src="Assets/sshot.png" alt="Screenshot" />
+</h3>
 
-__Sample project__
-<img src="Assets/sshot.png" alt="Screenshot" />
 
-## Download
+## Download & Install
 
 Get it on [Nuget](https://www.nuget.org/packages/TagsView/).
 
 ## Requirements
 
-iOS >= 9.0
+iOS 9+
 
 ## Features and usage
 
@@ -66,25 +66,35 @@ As explained in the code snippet, each tag can contain a source object. These wi
 - `TagSelected`: User tapped a tag.
 - `TagButtonTapped`: User tapped a tag button.
 
+
 There are also a lot of properties available for you to customize the look & feel:
-Feature | Property | Type
---------- | ---- | ----
-Alignment | Alignment | `TagsAlignment`
-Text color | TagTextColor | `UIColor`
-Tag background color | TagBackgroundColor | `UIColor`
-Font | TextFont | `UIFont`
-Tag corner radius | CornerRadius | `float`
-Tag border width | BorderWidth | `float`
-Tag border color | BorderColor | `UIColor`
-Padding Y | PaddingY | `float`
-Padding X | PaddingX | `float`
-Margin Y | Margin Y | `float`
-Margin X | Margin X | `float`
-Distance between text and button | ControlsDistance | `float`
-Button size | TagButtonSize | `float`
-Button color | TagButtonColor | `UIColor`
-Button icon | ButtonIcon | `UIImage`
+
+|Feature|Property|Type|
+| ------------------- | :------------------: | :------------------: |
+|Alignment|Alignment|`TagsAlignment`|
+Text color|TagTextColor|`UIColor`|
+Tag background color|TagBackgroundColor|`UIColor`|
+Font|TextFont|`UIFont`|
+Tag corner radius|CornerRadius|`float`|
+Tag border width|BorderWidth|`float`|
+Tag border color|BorderColor|`UIColor`|
+Padding Y|PaddingY|`float`|
+Padding X|PaddingX|`float`|
+Margin Y|Margin Y|`float`|
+Margin X|Margin X|`float`|
+Distance between text and button|ControlsDistance|`float`|
+Button size|TagButtonSize|`float`|
+Button color|TagButtonColor|`UIColor`|
+Button icon|ButtonIcon|`UIImage`|
 
 ## MvvmCross
 
 WIP :)
+
+## Contribution
+
+Pull requests (and issues) are welcome!
+
+## License
+
+MIT
