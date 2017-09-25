@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--/-:cnd -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.4</TargetFramework>
+    <PackageTargetFallback>portable-net45+win8+wpa81</PackageTargetFallback>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MvvmCross" Version="5.2.0" />
+    <PackageReference Include="MvvmCross.Binding" Version="5.2.0" />
+    <PackageReference Include="MvvmCross.Core" Version="5.2.0" />
+    <PackageReference Include="MvvmCross.Platform" Version="5.2.0" />
+  </ItemGroup>
+    
+</Project>

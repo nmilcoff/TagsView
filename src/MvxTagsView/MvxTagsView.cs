@@ -11,22 +11,22 @@ using TagsView;
 
 namespace MvxTagsView
 {
-    public class MvxTagsView<TSourceItem> : TagsView.TagListView, IMvxBindable
+    public class MvxTagsView<TSourceItem> : TagListView, IMvxBindable
     {
         private Func<TSourceItem, string> sourceItemToStringFunc;
 
         private IEnumerable<TSourceItem> _itemsSource;
         private IDisposable _subscription;
 
-        public MvxTagsView(Func<TSourceItem, string> sourceItemToStringFunc, bool enableRemoveButton = true)
-            : base(enableRemoveButton)
+        public MvxTagsView(Func<TSourceItem, string> sourceItemToStringFunc, bool enableTagButton = true)
+            : base(enableTagButton)
         {
             this.CreateBindingContext();
 
             this.sourceItemToStringFunc = sourceItemToStringFunc;
 
             this.TagSelected += this.Handle_TagSelected;
-            this.TagButtonTapped += this.Handle_RemoveButtonTapped;
+            this.TagButtonTapped += this.Handle_TagButtonTapped;
 
             if (this.BindingContext is MvxTaskBasedBindingContext context)
             {
@@ -53,7 +53,7 @@ namespace MvxTagsView
                 _subscription = null;
 
                 this.TagSelected -= this.Handle_TagSelected;
-                this.TagButtonTapped -= this.Handle_RemoveButtonTapped;
+                this.TagButtonTapped -= this.Handle_TagButtonTapped;
             }
             base.Dispose(disposing);
         }
@@ -87,7 +87,7 @@ namespace MvxTagsView
 
         public IMvxCommand<TSourceItem> TagSelectedCommand { get; set; }
 
-        public IMvxCommand<TSourceItem> RemoveButtonCommand { get; set; }
+        public IMvxCommand<TSourceItem> TagButtonCommand { get; set; }
 
         protected virtual void CollectionChangedOnCollectionChanged(
             object sender,
@@ -139,15 +139,15 @@ namespace MvxTagsView
                 this.TagSelectedCommand.Execute(param);
         }
 
-        private void Handle_RemoveButtonTapped(object sender, object e)
+        private void Handle_TagButtonTapped(object sender, object e)
         {
-            if (this.RemoveButtonCommand == null)
+            if (this.TagButtonCommand == null)
                 return;
 
             var param = (TSourceItem)e;
-            if (this.RemoveButtonCommand.CanExecute(param))
+            if (this.TagButtonCommand.CanExecute(param))
             {
-                this.RemoveButtonCommand.Execute(param);
+                this.TagButtonCommand.Execute(param);
             }
         }
 
