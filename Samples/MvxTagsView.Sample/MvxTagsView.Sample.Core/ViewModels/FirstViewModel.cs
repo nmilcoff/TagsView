@@ -10,13 +10,17 @@ namespace MvxTagsView_Sample.Core.ViewModels
         {
             this.SimpleTagSelectedCommand = new MvxCommand<string>(item => this.SimpleSource.Add($"{item} copied!"));
             this.SimpleTagButtonTappedCommand = new MvxCommand<string>(item => this.SimpleSource.Remove(item));
-        }
+            this.AddNewTagCommand = new MvxCommand(
+                () =>
+            {
+                if (string.IsNullOrWhiteSpace(this.NewTag))
+                    return;
 
-        string hello = "Hello MvvmCross";
-        public string Hello
-        {
-            get { return hello; }
-            set { SetProperty(ref hello, value); }
+                this.SimpleSource.Add(this.NewTag);
+
+                this.NewTag = string.Empty;
+                this.RaisePropertyChanged(() => this.NewTag);
+            });
         }
 
         public override async Task Initialize()
@@ -35,5 +39,9 @@ namespace MvxTagsView_Sample.Core.ViewModels
         public IMvxCommand<string> SimpleTagSelectedCommand { get; private set; }
 
         public IMvxCommand<string> SimpleTagButtonTappedCommand { get; private set; }
+
+        public IMvxCommand AddNewTagCommand { get; set; }
+
+        public string NewTag { get; set; }
     }
 }
