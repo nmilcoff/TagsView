@@ -12,7 +12,7 @@
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <PackOnBuild>true</PackOnBuild>
     <PackageId>MvxTagsView</PackageId>
-    <PackageVersion>1.0.2</PackageVersion>
+    <PackageVersion>1.0.3</PackageVersion>
     <Authors>nmilcoff</Authors>
     <PackageLicenseUrl>https://github.com/nmilcoff/TagsView/blob/master/LICENSE</PackageLicenseUrl>
     <Owners>Nicolas Milcoff</Owners>
@@ -84,7 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MvxTagsView.cs" />
+    <Compile Include="MvxTagListView.cs" />
     <Compile Include="MvxSimpleTagListView.cs" />
   </ItemGroup>
   <ItemGroup>

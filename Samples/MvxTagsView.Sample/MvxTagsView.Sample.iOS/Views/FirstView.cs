@@ -13,7 +13,7 @@ namespace MvxTagsView_Sample.iOS.Views
     {
         private UITextField txtNewTag;
         private UIButton btnAddTag;
-        private MvxSimpleTagsView simpleTagsView;
+        private MvxSimpleTagListView simpleTagsView;
 
         public FirstView(IntPtr handle) : base(handle)
         {
@@ -33,7 +33,7 @@ namespace MvxTagsView_Sample.iOS.Views
             this.btnAddTag.SetTitle("Add", UIControlState.Normal);
             this.btnAddTag.SetTitleColor(UIColor.Blue, UIControlState.Normal);
 
-            this.simpleTagsView = new MvxSimpleTagsView();
+            this.simpleTagsView = new MvxSimpleTagListView();
 
             this.View.AddSubviews(this.txtNewTag, this.btnAddTag, this.simpleTagsView);
             this.View.SubviewsDoNotTranslateAutoresizingMaskIntoConstraints();
@@ -57,7 +57,7 @@ namespace MvxTagsView_Sample.iOS.Views
             set.Bind(this.btnAddTag).To(vm => vm.AddNewTagCommand);
             set.Bind(this.simpleTagsView).For(v => v.ItemsSource).To(vm => vm.SimpleSource);
             set.Bind(this.simpleTagsView).For(v => v.TagSelectedCommand).To(vm => vm.SimpleTagSelectedCommand);
-            set.Bind(this.simpleTagsView).For(v => v.TagButtonCommand).To(vm => vm.SimpleTagButtonTappedCommand);
+            set.Bind(this.simpleTagsView).For(v => v.TagButtonTappedCommand).To(vm => vm.SimpleTagButtonTappedCommand);
             set.Apply();
         }
     }

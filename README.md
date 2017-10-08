@@ -1,5 +1,7 @@
 # TagsView
 
+[![NuGet](https://img.shields.io/nuget/v/Nuget.Core.svg)](https://www.nuget.org/packages/TagsView/)
+
 Simple and highly customizable Xamarin.iOS tag list view. Originally inspired by https://github.com/ElaWorkshop/TagListView
 
 Customizable features:
@@ -27,7 +29,9 @@ Customizable features:
 
 ## Download & Install
 
-Get it on [Nuget](https://www.nuget.org/packages/TagsView/).
+Get it on Nuget!
+[TagsView](https://www.nuget.org/packages/TagsView/)
+[MvxTagsView](https://www.nuget.org/packages/MvxTagsView/)
 
 ## Requirements
 
@@ -49,6 +53,12 @@ public class ViewController : UIViewController
         {
             // you can customize properties here!
         };
+
+        this.View.AddSubview(this.tagsView);
+
+        this.View.AddConstraints(        
+            // Add your constraints!
+        );
 
         // you can attach a source object to each tag
         var myObject = new MyModel { Title = "I'm a MyModel!" };
@@ -87,9 +97,59 @@ Button size|TagButtonSize|`float`|
 Button color|TagButtonColor|`UIColor`|
 Button icon|ButtonIcon|`UIImage`|
 
-## MvvmCross
+## MvvmCross version
 
-WIP :)
+
+If you are using MvvmCross, you can take advantage of MvxTagListView!
+
+```c#
+public class ViewController : UIViewController
+{
+    // declare a MvxTagListView using MyObject as items type
+    private MvxTagListView<MyObject> mvxTagsView;
+
+    public override void ViewDidLoad()
+    {
+        // You need to specify how MyObject can be translated to a string in the ctor!
+        this.mvxTagsView = new MvxTagListView<MyObject>(
+            myObject => myObject.Title)
+        {
+            // you can customize properties here!
+        };
+
+        this.View.AddSubview(this.mvxTagsView);
+
+        this.View.AddConstraints(        
+            // Add your constraints!
+        );
+
+        var set = this.CreateBindingSet<FirstView, FirstViewModel>();
+        // In this case, YourSource should be an ObservableCollection<MyObject>
+        set.Bind(this.mvxTagsView).For(v => v.ItemsSource).To(vm => vm.YourSource); 
+        // MyObjectTagSelectedCommand should be a IMvxCommand<MyObject>
+        set.Bind(this.mvxTagsView).For(v => v.TagSelectedCommand).To(vm => vm.MyObjectTagSelectedCommand);
+        // MyObjectTagButtonTappedCommand should be a IMvxCommand<MyObject>
+        set.Bind(this.mvxTagsView).For(v => v.TagButtonTappedCommand).To(vm => vm.MyObjectTagButtonTappedCommand);
+        set.Apply();
+    }
+}
+```
+
+As you can see from the code snippet, the control allows you to bind `ItemsSource` and two commands: `TagSelectedCommand`, `TagButtonTappedCommand`.
+
+#### Using a collection of strings as items source
+
+If your source is just a collection of strings, you should consider using `MvxSimpleTagListView`, super handy!
+
+```c#
+public class MvxSimpleTagListView : MvxTagListView<string>
+    {
+        public MvxSimpleTagListView(bool enableTagButton = true)
+            : base(s => s, enableTagButton)
+        {
+        }
+    }
+```
 
 ## Contribution
 

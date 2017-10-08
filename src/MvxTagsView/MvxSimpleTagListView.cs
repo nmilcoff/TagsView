@@ -2,9 +2,9 @@
 
 namespace MvxTagsView
 {
-    public class MvxSimpleTagsView : MvxTagsView<string>
+    public class MvxSimpleTagListView : MvxTagListView<string>
     {
-        public MvxSimpleTagsView(bool enableTagButton = true)
+        public MvxSimpleTagListView(bool enableTagButton = true)
             : base(s => s, enableTagButton)
         {
         }

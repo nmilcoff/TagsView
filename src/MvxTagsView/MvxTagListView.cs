@@ -11,14 +11,14 @@ using TagsView;
 
 namespace MvxTagsView
 {
-    public class MvxTagsView<TSourceItem> : TagListView, IMvxBindable
+    public class MvxTagListView<TSourceItem> : TagListView, IMvxBindable
     {
         private Func<TSourceItem, string> sourceItemToStringFunc;
 
         private IEnumerable<TSourceItem> _itemsSource;
         private IDisposable _subscription;
 
-        public MvxTagsView(Func<TSourceItem, string> sourceItemToStringFunc, bool enableTagButton = true)
+        public MvxTagListView(Func<TSourceItem, string> sourceItemToStringFunc, bool enableTagButton = true)
             : base(enableTagButton)
         {
             this.CreateBindingContext();
@@ -87,7 +87,7 @@ namespace MvxTagsView
 
         public IMvxCommand<TSourceItem> TagSelectedCommand { get; set; }
 
-        public IMvxCommand<TSourceItem> TagButtonCommand { get; set; }
+        public IMvxCommand<TSourceItem> TagButtonTappedCommand { get; set; }
 
         protected virtual void CollectionChangedOnCollectionChanged(
             object sender,
@@ -106,7 +106,7 @@ namespace MvxTagsView
                 case NotifyCollectionChangedAction.Move:
                     if (args.NewItems.Count != 1 && args.OldItems.Count != 1)
                     {
-                        MvxTrace.Warning("BindableTagsView: Move action called with more than one movement!");
+                        MvxTrace.Warning("MvxTagListView: Move action called with more than one movement!");
                         break;
                     }
 
@@ -141,13 +141,13 @@ namespace MvxTagsView
 
         private void Handle_TagButtonTapped(object sender, object e)
         {
-            if (this.TagButtonCommand == null)
+            if (this.TagButtonTappedCommand == null)
                 return;
 
             var param = (TSourceItem)e;
-            if (this.TagButtonCommand.CanExecute(param))
+            if (this.TagButtonTappedCommand.CanExecute(param))
             {
-                this.TagButtonCommand.Execute(param);
+                this.TagButtonTappedCommand.Execute(param);
             }
         }
 
