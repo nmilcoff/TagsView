@@ -1,6 +1,6 @@
 # TagsView
 
-[![NuGet](https://img.shields.io/nuget/v/Nuget.Core.svg)](https://www.nuget.org/packages/TagsView/)
+[![NuGet](https://img.shields.io/nuget/v/TagsView.svg?label=NuGet)](https://www.nuget.org/packages/TagsView/)
 
 Simple and highly customizable Xamarin.iOS tag list view. Originally inspired by https://github.com/ElaWorkshop/TagListView
 
