@@ -1,6 +1,10 @@
 # TagsView
 
-[![NuGet](https://img.shields.io/nuget/v/TagsView.svg?label=NuGet)](https://www.nuget.org/packages/TagsView/)
+|Package Name|Version|
+| ------------------- | :------------------: |
+|TagsView|[![NuGet](https://img.shields.io/nuget/v/TagsView.svg?label=NuGet)](https://www.nuget.org/packages/TagsView/)|
+|MvxTagsView|[![NuGet](https://img.shields.io/nuget/v/MvxTagsView.svg?label=NuGet)](https://www.nuget.org/packages/MvxTagsView/)|
+
 
 Simple and highly customizable Xamarin.iOS tag list view. Originally inspired by https://github.com/ElaWorkshop/TagListView
 
@@ -30,7 +34,9 @@ Customizable features:
 ## Download & Install
 
 Get it on Nuget!
+
 [TagsView](https://www.nuget.org/packages/TagsView/)
+
 [MvxTagsView](https://www.nuget.org/packages/MvxTagsView/)
 
 ## Requirements
