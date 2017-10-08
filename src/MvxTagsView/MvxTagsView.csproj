@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\NuGet.Build.Packaging.0.1.276\build\NuGet.Build.Packaging.props" Condition="Exists('..\..\packages\NuGet.Build.Packaging.0.1.276\build\NuGet.Build.Packaging.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -9,6 +10,17 @@
     <RootNamespace>MvxTagListView</RootNamespace>
     <AssemblyName>MvxTagListView</AssemblyName>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <PackOnBuild>true</PackOnBuild>
+    <PackageId>MvxTagsView</PackageId>
+    <PackageVersion>1.0.2</PackageVersion>
+    <Authors>nmilcoff</Authors>
+    <PackageLicenseUrl>https://github.com/nmilcoff/TagsView/blob/master/LICENSE</PackageLicenseUrl>
+    <Owners>Nicolas Milcoff</Owners>
+    <PackageProjectUrl>https://github.com/nmilcoff/TagsView</PackageProjectUrl>
+    <Title>MvxTagsView</Title>
+    <Description>MvvmCross version of TagsView, a simple and highly customizable Xamarin.iOS tag list view.</Description>
+    <Summary>MvvmCross version of TagsView, a simple and highly customizable Xamarin.iOS tag list view.</Summary>
+    <PackageTags>tags xamarin view ios view control widget</PackageTags>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,25 +58,25 @@
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
     <Reference Include="MvvmCross.Platform">
-      <HintPath>..\packages\MvvmCross.Platform.5.2.0\lib\Xamarin.iOS10\MvvmCross.Platform.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Platform.5.2.1\lib\Xamarin.iOS10\MvvmCross.Platform.dll</HintPath>
     </Reference>
     <Reference Include="MvvmCross.Platform.iOS">
-      <HintPath>..\packages\MvvmCross.Platform.5.2.0\lib\Xamarin.iOS10\MvvmCross.Platform.iOS.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Platform.5.2.1\lib\Xamarin.iOS10\MvvmCross.Platform.iOS.dll</HintPath>
     </Reference>
     <Reference Include="MvvmCross.Core">
-      <HintPath>..\packages\MvvmCross.Core.5.2.0\lib\Xamarin.iOS10\MvvmCross.Core.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Core.5.2.1\lib\Xamarin.iOS10\MvvmCross.Core.dll</HintPath>
     </Reference>
     <Reference Include="MvvmCross.iOS">
-      <HintPath>..\packages\MvvmCross.Core.5.2.0\lib\Xamarin.iOS10\MvvmCross.iOS.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Core.5.2.1\lib\Xamarin.iOS10\MvvmCross.iOS.dll</HintPath>
     </Reference>
     <Reference Include="MvvmCross.Binding">
-      <HintPath>..\packages\MvvmCross.Binding.5.2.0\lib\Xamarin.iOS10\MvvmCross.Binding.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Binding.5.2.1\lib\Xamarin.iOS10\MvvmCross.Binding.dll</HintPath>
     </Reference>
     <Reference Include="MvvmCross.Binding.iOS">
-      <HintPath>..\packages\MvvmCross.Binding.5.2.0\lib\Xamarin.iOS10\MvvmCross.Binding.iOS.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Binding.5.2.1\lib\Xamarin.iOS10\MvvmCross.Binding.iOS.dll</HintPath>
     </Reference>
     <Reference Include="MvvmCross.Localization">
-      <HintPath>..\packages\MvvmCross.Binding.5.2.0\lib\Xamarin.iOS10\MvvmCross.Localization.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Binding.5.2.1\lib\Xamarin.iOS10\MvvmCross.Localization.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -85,4 +97,5 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\..\packages\NuGet.Build.Packaging.0.1.276\build\NuGet.Build.Packaging.targets" Condition="Exists('..\..\packages\NuGet.Build.Packaging.0.1.276\build\NuGet.Build.Packaging.targets')" />
 </Project>
