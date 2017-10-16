@@ -1,5 +1,7 @@
 # TagsView
 
+[![Build Status](https://www.bitrise.io/app/14726f447bc8809f/status.svg?token=9Pt4h7jEexHPA3_V3lUBZQ&branch=master)](https://www.bitrise.io/app/14726f447bc8809f/status.svg?token=9Pt4h7jEexHPA3_V3lUBZQ&branch=master)
+
 |Package Name|Version|
 | ------------------- | :------------------: |
 |TagsView|[![NuGet](https://img.shields.io/nuget/v/TagsView.svg?label=NuGet)](https://www.nuget.org/packages/TagsView/)|
