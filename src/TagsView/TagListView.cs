@@ -355,21 +355,8 @@ namespace TagsView
 
             this.RowQuantity = currentRowCount;
 
-            //this.AddHackySubviewToStackViews();
-
             this.SetupRowConstraints();
         }
-
-        //private void AddHackySubviewToStackViews()
-        //{
-        //    foreach (var stack in this.RowViews)
-        //    {
-        //        var dummyView = new UIView { BackgroundColor = UIColor.Clear };
-        //        dummyView.SetContentHuggingPriority(249, UILayoutConstraintAxis.Horizontal);
-
-        //        stack.AddArrangedSubview(dummyView);
-        //    }
-        //}
 
         private void SetupRowConstraints()
         {
