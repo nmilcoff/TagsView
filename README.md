@@ -44,6 +44,7 @@ Get it on Nuget!
 ## Requirements
 
 iOS 9+
+Cirrious.FluentLayout (https://github.com/FluentLayout/Cirrious.FluentLayout)
 
 ## Features and usage
 
