@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Cirrious.FluentLayouts.Touch; // This is required
+using Cirrious.FluentLayouts.Touch;
 using UIKit;
 
 namespace TagsView
