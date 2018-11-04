@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using MvvmCross.Binding.Attributes;
 using MvvmCross.Binding.BindingContext;
-using MvvmCross.Binding.iOS.Views;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.Platform.Platform;
-using MvvmCross.Platform.WeakSubscription;
+using MvvmCross.Commands;
+using MvvmCross.Logging;
+using MvvmCross.Platforms.Ios.Binding.Views;
+using MvvmCross.WeakSubscription;
+using MvxTagListView;
 using TagsView;
 
 namespace MvxTagsView
@@ -106,7 +107,7 @@ namespace MvxTagsView
                 case NotifyCollectionChangedAction.Move:
                     if (args.NewItems.Count != 1 && args.OldItems.Count != 1)
                     {
-                        MvxTrace.Warning("MvxTagListView: Move action called with more than one movement!");
+                        MvxTagsViewLog.Instance?.Warn("MvxTagListView: Move action called with more than one movement!");
                         break;
                     }
 
