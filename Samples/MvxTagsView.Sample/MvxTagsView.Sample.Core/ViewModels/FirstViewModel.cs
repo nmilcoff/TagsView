@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
-using MvvmCross.Core.ViewModels;
+using MvvmCross.Commands;
+using MvvmCross.ViewModels;
 
 namespace MvxTagsView_Sample.Core.ViewModels
 {

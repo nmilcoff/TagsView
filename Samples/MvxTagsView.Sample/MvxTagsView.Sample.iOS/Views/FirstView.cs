@@ -1,9 +1,9 @@
 ﻿using System;
+using Cirrious.FluentLayouts.Touch;
 using MvvmCross.Binding.BindingContext;
-using MvvmCross.iOS.Views;
+using MvvmCross.Platforms.Ios.Views;
 using MvxTagsView;
 using MvxTagsView_Sample.Core.ViewModels;
-using Cirrious.FluentLayouts.Touch;
 using UIKit;
 
 namespace MvxTagsView_Sample.iOS.Views
