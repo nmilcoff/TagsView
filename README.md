@@ -1,6 +1,6 @@
 # TagsView
 
-[![Build Status](https://www.bitrise.io/app/14726f447bc8809f/status.svg?token=9Pt4h7jEexHPA3_V3lUBZQ&branch=master)](https://www.bitrise.io/app/14726f447bc8809f/status.svg?token=9Pt4h7jEexHPA3_V3lUBZQ&branch=master)
+[![Build status](https://ci.appveyor.com/api/projects/status/a058sud1vs7xtwx8?svg=true)](https://ci.appveyor.com/project/nmilcoff/tagsview)
 
 |Package Name|Version|
 | ------------------- | :------------------: |
